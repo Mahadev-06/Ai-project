@@ -8,15 +8,11 @@ import { Trash2, Search, FileText, ArrowRight } from 'lucide-react';
 export default function HistoryPage() {
   const { history, loading, clear, remove } = useHistory();
   const [searchTerm, setSearchTerm] = useState('');
-  const [modeFilter, setModeFilter] = useState<'all' | 'local' | 'live'>('all');
   const [showClearConfirm, setShowClearConfirm] = useState(false);
   const navigate = useNavigate();
 
   const filteredHistory = useMemo(() => {
     return history.filter((item) => {
-      const mode = item.report?.evidence_mode || 'local';
-      if (modeFilter !== 'all' && mode !== modeFilter) return false;
-
       if (!searchTerm.trim()) return true;
       const term = searchTerm.toLowerCase();
 
@@ -30,7 +26,7 @@ export default function HistoryPage() {
       const claims = item.report?.claims || [];
       return claims.some((c) => c.claim_text.toLowerCase().includes(term));
     });
-  }, [history, searchTerm, modeFilter]);
+  }, [history, searchTerm]);
 
   if (loading) {
     return (
@@ -57,7 +53,7 @@ export default function HistoryPage() {
             <Button
               variant="secondary"
               onClick={() => setShowClearConfirm(true)}
-              className="text-xs"
+              className="text-xs hover:text-red-600 hover:border-red-300 hover:bg-red-50 transition-colors"
             >
               Clear All Reports
             </Button>
@@ -85,7 +81,7 @@ export default function HistoryPage() {
                 clear();
                 setShowClearConfirm(false);
               }}
-              className="text-xs"
+              className="text-xs bg-red-600 hover:bg-red-700 text-white border-red-600 transition-colors"
             >
               Confirm Clear
             </Button>
@@ -93,58 +89,20 @@ export default function HistoryPage() {
         </div>
       )}
 
-      {/* Search and Filters */}
+      {/* Search Input */}
       {history.length > 0 && (
-        <div className="flex flex-col sm:flex-row gap-3">
-          <div className="relative flex-1">
-            <Search
-              size={16}
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 text-charcoal/40"
-            />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search reports by claim text, topic, or ID..."
-              className="w-full pl-9 pr-4 py-2 text-sm bg-ivory border border-charcoal/20 rounded-md focus-ring text-charcoal placeholder-charcoal/40"
-            />
-          </div>
-
-          <div className="flex items-center gap-1 border border-charcoal/20 rounded-md p-1 bg-ivory text-xs">
-            <button
-              type="button"
-              onClick={() => setModeFilter('all')}
-              className={`px-3 py-1 rounded transition-colors ${
-                modeFilter === 'all'
-                  ? 'bg-charcoal text-ivory font-medium'
-                  : 'text-charcoal/60 hover:text-charcoal'
-              }`}
-            >
-              All
-            </button>
-            <button
-              type="button"
-              onClick={() => setModeFilter('local')}
-              className={`px-3 py-1 rounded transition-colors ${
-                modeFilter === 'local'
-                  ? 'bg-charcoal text-ivory font-medium'
-                  : 'text-charcoal/60 hover:text-charcoal'
-              }`}
-            >
-              Local
-            </button>
-            <button
-              type="button"
-              onClick={() => setModeFilter('live')}
-              className={`px-3 py-1 rounded transition-colors ${
-                modeFilter === 'live'
-                  ? 'bg-charcoal text-ivory font-medium'
-                  : 'text-charcoal/60 hover:text-charcoal'
-              }`}
-            >
-              Live
-            </button>
-          </div>
+        <div className="relative w-full">
+          <Search
+            size={16}
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-charcoal/40"
+          />
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search reports by claim text, topic, or ID..."
+            className="w-full pl-9 pr-4 py-2.5 text-sm bg-ivory border border-charcoal/20 rounded-md focus-ring text-charcoal placeholder-charcoal/40"
+          />
         </div>
       )}
 
@@ -195,7 +153,7 @@ export default function HistoryPage() {
                       #{item.id.slice(0, 8)}
                     </span>
                     <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.2 border border-charcoal/20 rounded text-charcoal/70">
-                      {report?.evidence_mode || 'Local'}
+                      {report?.evidence_mode || 'Auto'}
                     </span>
                     <span className="text-xs text-charcoal/40">•</span>
                     <span className="text-xs text-charcoal/60">
@@ -220,11 +178,11 @@ export default function HistoryPage() {
                       e.stopPropagation();
                       remove(item.id);
                     }}
-                    className="p-2 text-charcoal/40 hover:text-charcoal hover:bg-charcoal/5 focus-ring rounded transition-colors"
+                    className="p-2 text-charcoal/40 hover:text-red-600 hover:bg-red-50 focus-ring rounded transition-colors group/delete"
                     aria-label={`Delete report ${item.id.slice(0, 8)}`}
                     title="Delete report"
                   >
-                    <Trash2 size={16} />
+                    <Trash2 size={16} className="transition-transform group-hover/delete:scale-110" />
                   </button>
 
                   <span className="text-xs text-charcoal/70 group-hover:text-charcoal inline-flex items-center gap-1 font-medium pl-1">
