@@ -134,6 +134,26 @@ See `.env.example` for all settings.
 
 All pretrained models are used as-is; they were not trained from scratch by this project.
 
+## Deployment
+
+### 1. Frontend on Vercel
+The frontend is pre-configured for Vercel with SPA routing rewrites:
+1. Go to [Vercel](https://vercel.com) and click **Add New Project**.
+2. Import the `Mahadev-06/Ai-project` repository.
+3. Configuration:
+   - **Framework Preset**: Vite
+   - **Root Directory**: `frontend` (or leave as `./` — root `vercel.json` is included)
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. In **Environment Variables**, add:
+   - `VITE_API_URL`: Your deployed backend URL (e.g. `https://your-backend.onrender.com/api/v1`)
+5. Click **Deploy**.
+
+### 2. Backend on Cloud (Render / Railway / Fly.io / Docker)
+The backend uses PyTorch, Sentence-Transformers, and DeBERTa models:
+- **Docker**: Run `docker compose up -d` or deploy `backend/Dockerfile` to any container host.
+- **Render / Railway / Fly.io**: Create a Web Service pointing to `backend/`, with start command `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+
 ## License
 
 Academic project — see individual model licenses in [docs/model-and-data-card.md](docs/model-and-data-card.md).
