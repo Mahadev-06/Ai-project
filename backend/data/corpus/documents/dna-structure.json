@@ -1,0 +1,15 @@
+{
+  "doc_id": "dna-structure-15",
+  "title": "Structure of DNA",
+  "publisher": "National Human Genome Research Institute",
+  "source_url": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2024-02-14",
+  "attribution": "NIH National Human Genome Research Institute",
+  "license": "Public Domain",
+  "passages": [
+    "Deoxyribonucleic acid (DNA) is a molecule composed of two polynucleotide chains that coil around each other to form a double helix. This structure carries genetic instructions for the development, functioning, growth and reproduction of all known organisms.",
+    "The double helix structure of DNA was discovered in 1953 by James Watson and Francis Crick, drawing heavily upon X-ray diffraction images captured by Rosalind Franklin and Maurice Wilkins. This discovery fundamentally changed the field of biology.",
+    "The genetic information is encoded in the sequence of four chemical bases: adenine (A), guanine (G), cytosine (C), and thymine (T). In the DNA double helix, A always pairs with T, and C always pairs with G across the two strands."
+  ]
+}

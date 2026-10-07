@@ -1,0 +1,15 @@
+{
+  "doc_id": "lightning-strikes-05",
+  "title": "Lightning Characteristics and Strike Frequencies",
+  "publisher": "National Weather Service",
+  "source_url": "https://www.weather.gov/safety/lightning-myths",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2022-04-10",
+  "attribution": "NOAA National Weather Service",
+  "license": "Public Domain",
+  "passages": [
+    "It is a myth that lightning never strikes the same place twice. Lightning is actually more likely to strike tall, pointed, isolated objects repeatedly. The Empire State Building in New York City, for example, is struck by lightning an average of 20 to 25 times per year.",
+    "A typical lightning flash contains about 300 million volts and 30,000 amps of electrical current. The temperature of a lightning bolt can reach 30,000 kelvins (53,540 degrees Fahrenheit), which is about five times hotter than the surface of the Sun.",
+    "Lightning often strikes the ground multiple times within a single flash. What appears to the eye as a single flickering strike is usually a series of strokes occurring in rapid succession within the same ionized channel."
+  ]
+}

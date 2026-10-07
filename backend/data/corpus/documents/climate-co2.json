@@ -1,0 +1,15 @@
+{
+  "doc_id": "climate-co2-11",
+  "title": "Atmospheric Carbon Dioxide Levels",
+  "publisher": "NOAA",
+  "source_url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2024-05-12",
+  "attribution": "NOAA Climate.gov",
+  "license": "Public Domain",
+  "passages": [
+    "Before the Industrial Revolution, global average atmospheric carbon dioxide (CO2) levels were approximately 280 parts per million (ppm). By 2023, the global average had surpassed 420 ppm, representing a roughly 50% increase in a relatively short geological timeframe.",
+    "Carbon dioxide is a major greenhouse gas, meaning it traps heat radiating from the Earth's surface and prevents it from escaping into space. This enhanced greenhouse effect is the primary driver of observed contemporary global warming.",
+    "Ice core records spanning the last 800,000 years reveal that atmospheric CO2 levels never exceeded 300 ppm during past natural climate cycles. The current rapid rise is definitively linked to human activities, primarily the burning of fossil fuels and deforestation."
+  ]
+}

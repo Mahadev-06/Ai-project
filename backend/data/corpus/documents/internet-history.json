@@ -1,0 +1,15 @@
+{
+  "doc_id": "internet-history-30",
+  "title": "History of the Internet and World Wide Web",
+  "publisher": "Internet Society",
+  "source_url": "https://www.internetsociety.org/internet/history-internet/",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-01-01",
+  "attribution": "Internet Society (Paraphrased)",
+  "license": "Fair Use",
+  "passages": [
+    "The origins of the Internet date back to 1969 with the creation of ARPANET, an experimental computer network funded by the U.S. Department of Defense. On January 1, 1983, ARPANET officially transitioned to using the TCP/IP protocol suite, laying the technical foundation for the modern Internet.",
+    "The World Wide Web is a system of interconnected documents and resources accessed via the Internet, invented by British computer scientist Tim Berners-Lee between 1989 and 1991 while working at CERN. It fundamentally transformed the Internet into a publicly accessible medium.",
+    "Since the introduction of the web, Internet adoption has grown exponentially. By 2023, it was estimated that over 5 billion people\u2014more than 60% of the global population\u2014used the Internet regularly for communication, commerce, and information retrieval."
+  ]
+}

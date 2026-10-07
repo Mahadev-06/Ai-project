@@ -1,0 +1,15 @@
+{
+  "doc_id": "speed-of-light-08",
+  "title": "The Speed of Light in a Vacuum",
+  "publisher": "NIST",
+  "source_url": "https://www.nist.gov/si-redefinition/meter",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2018-11-16",
+  "attribution": "National Institute of Standards and Technology (NIST)",
+  "license": "Public Domain",
+  "passages": [
+    "The speed of light in a vacuum, denoted by the symbol 'c', is exactly 299,792,458 meters per second. This value is a fundamental physical constant and is exact because the length of the meter is defined based upon it.",
+    "According to Albert Einstein's theory of special relativity, 'c' is the upper limit for the speed at which conventional matter, energy, and information can travel through space. As an object's speed approaches the speed of light, its relativistic mass increases towards infinity.",
+    "Light travels through different media, such as glass, water, or air, at speeds slower than 'c'. The ratio of the speed of light in a vacuum to its speed in a given medium is known as the refractive index of that medium."
+  ]
+}

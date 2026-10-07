@@ -1,0 +1,15 @@
+{
+  "doc_id": "vaccines-disease-12",
+  "title": "Impact of Vaccines on Global Diseases",
+  "publisher": "World Health Organization",
+  "source_url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-07-18",
+  "attribution": "World Health Organization (WHO)",
+  "license": "Fair Use",
+  "passages": [
+    "Vaccines are one of the most effective public health interventions in history. In 1980, following a massive global vaccination campaign, the World Health Assembly officially declared the global eradication of smallpox, a disease that once killed millions.",
+    "The Global Polio Eradication Initiative, heavily reliant on widespread vaccination, has reduced worldwide polio cases by over 99% since 1988. Wild poliovirus is now endemic in only two countries, down from over 125.",
+    "WHO estimates that immunization currently prevents 3.5 to 5 million deaths every year from diseases like diphtheria, tetanus, pertussis, influenza and measles. Widespread vaccination maintains herd immunity, protecting those unable to be vaccinated."
+  ]
+}

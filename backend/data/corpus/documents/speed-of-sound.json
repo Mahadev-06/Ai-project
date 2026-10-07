@@ -1,0 +1,15 @@
+{
+  "doc_id": "speed-of-sound-24",
+  "title": "The Speed of Sound",
+  "publisher": "NASA",
+  "source_url": "https://www.grc.nasa.gov/www/k-12/airplane/sound.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2021-05-13",
+  "attribution": "NASA Glenn Research Center",
+  "license": "Public Domain",
+  "passages": [
+    "The speed of sound is the distance travelled per unit of time by a sound wave as it propagates through an elastic medium. In dry air at 20 \u00b0C (68 \u00b0F), the speed of sound is approximately 343 meters per second (767 mph).",
+    "The speed of sound is not a constant; it depends strongly on the properties of the medium it passes through, primarily its temperature, stiffness, and density. In gases like air, the speed of sound increases as the temperature of the gas increases.",
+    "Sound waves travel significantly faster in liquids and solids than they do in gases due to the closer packing of molecules. For instance, sound travels at about 1,480 meters per second in pure water, more than four times faster than in air."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "doc_id": "great-wall-vis-02",
+  "title": "Visibility of the Great Wall of China from Space",
+  "publisher": "NASA",
+  "source_url": "https://www.nasa.gov/vision/space/workinginspace/great_wall.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2005-05-09",
+  "attribution": "National Aeronautics and Space Administration (NASA)",
+  "license": "Public Domain",
+  "passages": [
+    "The Great Wall of China is generally not visible to the naked eye from low Earth orbit, and certainly not from the Moon. The wall's maximum width is only about 9.1 meters (30 feet) and its color blends into the surrounding landscape.",
+    "Astronauts have confirmed that without magnification, the Great Wall is indistinguishable from other geographic features. It is a persistent myth that it is the only man-made object visible from space.",
+    "Using radar and high-resolution camera lenses, parts of the Great Wall can be imaged from low Earth orbit. However, many other human-made structures, such as highways and cities, are far more visible from space under normal conditions."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "doc_id": "ocean-depth-23",
+  "title": "The Deepest Points of the Ocean",
+  "publisher": "NOAA",
+  "source_url": "https://oceanservice.noaa.gov/facts/mariana.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-01-20",
+  "attribution": "National Oceanic and Atmospheric Administration (NOAA)",
+  "license": "Public Domain",
+  "passages": [
+    "The deepest known part of the world's oceans is the Mariana Trench, located in the western Pacific Ocean. The trench is a crescent-shaped scar in the Earth's crust that measures more than 2,500 kilometers (1,500 miles) long.",
+    "The absolute deepest point within the Mariana Trench is known as the Challenger Deep. Recent precision measurements estimate its depth to be approximately 10,994 meters (36,070 feet) below sea level, though slight variations exist between surveys.",
+    "The immense pressure at the bottom of the Challenger Deep is over 1,000 times standard atmospheric pressure at sea level. Despite these extreme, dark, and near-freezing conditions, specialized organisms such as xenophyophores and specific amphipods have been found living there."
+  ]
+}

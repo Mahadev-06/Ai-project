@@ -1,0 +1,15 @@
+{
+  "doc_id": "renewable-energy-27",
+  "title": "Growth of Global Renewable Energy",
+  "publisher": "International Energy Agency",
+  "source_url": "https://www.iea.org/reports/renewables-2023",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2024-01-11",
+  "attribution": "International Energy Agency (IEA)",
+  "license": "Fair Use",
+  "passages": [
+    "Global capacity for renewable energy generation, particularly from solar photovoltaic (PV) and wind power, is expanding at an unprecedented rate. In 2023, the world added roughly 50% more renewable capacity than it did the previous year.",
+    "The cost of technologies for generating renewable electricity has plummeted over the last decade. The levelized cost of electricity from utility-scale solar PV and onshore wind is now competitive with or cheaper than new fossil fuel power plants in most parts of the world.",
+    "Despite rapid growth, integrating large shares of variable renewable energy into electrical grids presents challenges. Enhancing grid infrastructure, expanding energy storage solutions, and increasing system flexibility are critical for managing supply and demand."
+  ]
+}

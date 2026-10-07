@@ -1,0 +1,15 @@
+{
+  "doc_id": "global-population-21",
+  "title": "Global Population Trends",
+  "publisher": "United Nations",
+  "source_url": "https://www.un.org/en/global-issues/population",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-04-11",
+  "attribution": "United Nations Population Fund (UNFPA)",
+  "license": "Public Domain",
+  "passages": [
+    "The global human population officially reached 8 billion individuals in November 2022, marking a major milestone in human development. This growth has been driven by widespread improvements in public health, nutrition, personal hygiene, and medicine.",
+    "While the total population continues to grow, the global population growth rate has been slowing down for decades. In 2020, the global growth rate fell under 1% per year for the first time since 1950, due to declining fertility rates worldwide.",
+    "Demographers project that the world's population will peak at around 10.4 billion people during the 2080s and is expected to remain at that level until 2100. More than half of the projected increase in global population up to 2050 will be concentrated in just eight countries."
+  ]
+}

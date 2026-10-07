@@ -1,0 +1,15 @@
+{
+  "doc_id": "moon-landing-09",
+  "title": "Apollo 11 Moon Landing",
+  "publisher": "NASA",
+  "source_url": "https://www.nasa.gov/mission_pages/apollo/apollo11.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2019-07-16",
+  "attribution": "National Aeronautics and Space Administration (NASA)",
+  "license": "Public Domain",
+  "passages": [
+    "On July 20, 1969, the Apollo 11 Lunar Module Eagle touched down in the Sea of Tranquility, making it the first crewed mission to land on the Moon. The mission was commanded by Neil Armstrong and piloted by Buzz Aldrin.",
+    "Neil Armstrong became the first human to step onto the lunar surface, famously declaring 'That's one small step for [a] man, one giant leap for mankind.' He and Aldrin spent about two and a quarter hours outside the spacecraft exploring the surface.",
+    "The Apollo missions brought back over 380 kilograms (842 pounds) of lunar rocks and soil. Decades of analysis by scientists worldwide, combined with extensive telemetry, photographic evidence, and retroreflectors left on the surface, definitively prove the landings occurred."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "doc_id": "earth-sun-orbit-04",
+  "title": "Earth's Orbit and Axial Tilt",
+  "publisher": "NASA",
+  "source_url": "https://solarsystem.nasa.gov/planets/earth/in-depth/",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-08-15",
+  "attribution": "NASA Solar System Exploration",
+  "license": "Public Domain",
+  "passages": [
+    "Earth orbits the Sun at an average distance of about 149.6 million kilometers (93 million miles), a distance defined as 1 Astronomical Unit (AU). It takes approximately 365.25 days for Earth to complete one full revolution around the Sun.",
+    "The extra quarter of a day in Earth's orbit is accounted for by adding a leap day every four years. This keeps our calendar in alignment with the astronomical seasons.",
+    "Earth's axis of rotation is tilted at an angle of roughly 23.5 degrees relative to its orbital plane. This axial tilt is the primary cause of the seasons, as different hemispheres receive varying amounts of direct sunlight throughout the year."
+  ]
+}

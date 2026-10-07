@@ -1,0 +1,15 @@
+{
+  "doc_id": "fresh-water-28",
+  "title": "Distribution of Earth's Water",
+  "publisher": "USGS",
+  "source_url": "https://www.usgs.gov/special-topics/water-science-school/science/where-earths-water",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2019-10-22",
+  "attribution": "U.S. Geological Survey (USGS)",
+  "license": "Public Domain",
+  "passages": [
+    "While water covers about 71% of the Earth's surface, the vast majority is saline ocean water. Only about 2.5% of all the water on Earth is freshwater, the type required to sustain terrestrial plant, animal, and human life.",
+    "Of that small percentage of freshwater, nearly 69% is locked away in glaciers, permanent snow, and polar ice caps, primarily in Antarctica and Greenland. About 30% of freshwater exists as groundwater stored deep in underground aquifers.",
+    "Consequently, less than 1% of the Earth's total freshwater is readily accessible for human use in lakes, rivers, and shallow aquifers. This relatively small amount must support ecosystems, agriculture, industry, and municipal water supplies worldwide."
+  ]
+}

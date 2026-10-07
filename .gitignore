@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Model weights and caches
+.model_cache/
+models/
+*.bin
+*.pt
+*.onnx
+*.safetensors
+
+# Corpus embeddings cache
+data/corpus/embeddings/
+data/corpus/*.npy
+
+# Large data files
+data/fever/
+data/downloads/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+frontend/dist/
+frontend/.vite/
+backend/htmlcov/
+.coverage
+*.cover
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Test artifacts
+test-results/
+playwright-report/
+screenshots/

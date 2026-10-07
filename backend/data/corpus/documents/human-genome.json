@@ -1,0 +1,15 @@
+{
+  "doc_id": "human-genome-26",
+  "title": "The Human Genome Project",
+  "publisher": "National Human Genome Research Institute",
+  "source_url": "https://www.genome.gov/human-genome-project",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-08-25",
+  "attribution": "NIH National Human Genome Research Institute",
+  "license": "Public Domain",
+  "passages": [
+    "The human genome contains approximately 3 billion base pairs of DNA, spread across 23 pairs of chromosomes. This genetic material contains the instructions required to build and maintain a human being.",
+    "The Human Genome Project (HGP) was an international, collaborative research program completed in 2003, which aimed to completely map and understand all the genes of human beings. It remains one of the largest biological research projects ever undertaken.",
+    "Initial estimates suggested humans might have over 100,000 genes, but the HGP revealed that humans actually have a surprisingly small number of protein-coding genes, currently estimated to be around 20,000 to 25,000."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "created_date": "2024-09-01",
+  "description": "ClaimLens local evidence corpus v1.0. A curated collection of factual passages from authoritative sources covering science, health, geography, history, and technology. Used as the default evidence base for offline claim verification.",
+  "document_count": 30,
+  "topics": [
+    "Earth science and climate",
+    "Space and astronomy",
+    "Human health and medicine",
+    "Geography and demographics",
+    "History and landmarks",
+    "Biology and nature",
+    "Physics and chemistry",
+    "Technology and computing",
+    "Economics and development",
+    "Nutrition and food science"
+  ],
+  "license_summary": "All content is drawn from or paraphrases publicly available factual information from government agencies (NASA, WHO, NOAA, USGS), educational institutions, and reference sources. Content used under fair use for educational research purposes. See individual documents for specific attributions.",
+  "sources": [
+    "NASA",
+    "WHO",
+    "NOAA",
+    "USGS",
+    "CDC",
+    "World Bank",
+    "Encyclopedia Britannica (paraphrased)",
+    "National Geographic (paraphrased)",
+    "UN agencies",
+    "IPCC"
+  ]
+}

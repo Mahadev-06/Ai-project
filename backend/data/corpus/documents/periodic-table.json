@@ -1,0 +1,15 @@
+{
+  "doc_id": "periodic-table-25",
+  "title": "The Periodic Table of Elements",
+  "publisher": "International Union of Pure and Applied Chemistry",
+  "source_url": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2022-05-04",
+  "attribution": "IUPAC (Paraphrased)",
+  "license": "Fair Use",
+  "passages": [
+    "The periodic table is a tabular display of all known chemical elements, organized by their atomic number, electron configuration, and recurring chemical properties. Elements are arranged in rows called periods and columns called groups.",
+    "As of the most recent updates, there are 118 confirmed chemical elements on the periodic table. The last four elements (nihonium, moscovium, tennessine, and oganesson) were formally added in 2016, completing the seventh row of the table.",
+    "The modern layout of the periodic table evolved from the work of Russian chemist Dmitri Mendeleev, who published his first version in 1869. Mendeleev successfully used his table to predict the properties of elements that had not yet been discovered."
+  ]
+}

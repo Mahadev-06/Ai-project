@@ -1,0 +1,15 @@
+{
+  "doc_id": "earth-shape-01",
+  "title": "Shape of the Earth",
+  "publisher": "NOAA",
+  "source_url": "https://oceanservice.noaa.gov/facts/earth-round.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-01-20",
+  "attribution": "National Oceanic and Atmospheric Administration (NOAA)",
+  "license": "Public Domain",
+  "passages": [
+    "The Earth is an irregularly shaped ellipsoid, specifically an oblate spheroid. While it appears round from space, it is not a perfect sphere. The Earth's rotation causes it to bulge at the equator and flatten at the poles.",
+    "The equatorial diameter of Earth is about 12,756 kilometers (7,926 miles), while the polar diameter is about 12,714 kilometers (7,900 miles). This difference of about 42 kilometers means the Earth is slightly wider than it is tall.",
+    "The shape of the Earth is continuously changing, albeit very slowly. Factors such as tectonic plate movement, the rebound of crust from melting glaciers, and tidal forces all contribute to these ongoing structural variations."
+  ]
+}

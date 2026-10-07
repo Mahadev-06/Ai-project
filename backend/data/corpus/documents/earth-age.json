@@ -1,0 +1,15 @@
+{
+  "doc_id": "earth-age-10",
+  "title": "Age of the Earth",
+  "publisher": "USGS",
+  "source_url": "https://pubs.usgs.gov/gip/geotime/age.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2007-07-09",
+  "attribution": "U.S. Geological Survey (USGS)",
+  "license": "Public Domain",
+  "passages": [
+    "Based on extensive scientific evidence, the Earth is estimated to be approximately 4.54 billion years old, with an uncertainty of about 1%. This age represents the time when the Earth formed from the solar nebula alongside the rest of the solar system.",
+    "The primary method for determining the Earth's age is radiometric dating, specifically the uranium-lead dating of meteorites. Since meteorites formed at the same time as the solar system and have remained largely unaltered, they provide a reliable age for the Earth.",
+    "The oldest known terrestrial materials are zircon crystals found in the Jack Hills of Western Australia. These microscopic minerals have been dated using radiometric techniques to be approximately 4.4 billion years old, indicating the early presence of a solid crust."
+  ]
+}

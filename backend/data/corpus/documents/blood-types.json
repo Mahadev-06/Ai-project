@@ -1,0 +1,15 @@
+{
+  "doc_id": "blood-types-19",
+  "title": "Human Blood Groups",
+  "publisher": "American Red Cross",
+  "source_url": "https://www.redcrossblood.org/donate-blood/blood-types.html",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2024-03-01",
+  "attribution": "American Red Cross (Paraphrased)",
+  "license": "Fair Use",
+  "passages": [
+    "The ABO blood group system classifies human blood into four main types based on the presence or absence of specific antigens on the surface of red blood cells: Type A, Type B, Type AB, and Type O. An individual's blood type is inherited from their parents.",
+    "In addition to the ABO system, the Rh factor is another critical antigen. If it is present, the blood type is positive (+); if absent, it is negative (-). This yields eight common blood types in total, such as A+ or O-.",
+    "Individuals with O-negative blood are known as 'universal donors' because their red blood cells lack A, B, and Rh antigens, minimizing the risk of adverse reactions in recipients. Conversely, individuals with AB-positive blood are considered 'universal recipients'."
+  ]
+}

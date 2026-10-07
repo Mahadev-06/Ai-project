@@ -1,0 +1,15 @@
+{
+  "doc_id": "antibiotic-resistance-22",
+  "title": "Antimicrobial Resistance",
+  "publisher": "World Health Organization",
+  "source_url": "https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2023-11-21",
+  "attribution": "World Health Organization (WHO)",
+  "license": "Fair Use",
+  "passages": [
+    "Antibiotic resistance is one of the biggest threats to global health, food security, and development today. It occurs when bacteria evolve in ways that reduce or eliminate the effectiveness of drugs, chemicals, or other agents designed to cure or prevent infections.",
+    "The WHO has declared antimicrobial resistance a top 10 global public health threat facing humanity. Infections caused by resistant bacteria are harder to treat, requiring higher doses of alternative medications that may be more toxic and expensive.",
+    "The primary driver of antimicrobial resistance is the misuse and overuse of antimicrobials in humans, animals, and plants. Poor infection and disease prevention in healthcare settings and agriculture further accelerate the spread of resistant microbes."
+  ]
+}

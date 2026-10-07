@@ -1,0 +1,15 @@
+{
+  "doc_id": "solar-system-planets-17",
+  "title": "Planets of the Solar System",
+  "publisher": "NASA",
+  "source_url": "https://solarsystem.nasa.gov/planets/overview/",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2024-01-10",
+  "attribution": "NASA Solar System Exploration",
+  "license": "Public Domain",
+  "passages": [
+    "The solar system consists of eight officially recognized planets that orbit the Sun. These are categorized into four inner terrestrial planets (Mercury, Venus, Earth, Mars) and four outer giant planets (Jupiter, Saturn, Uranus, Neptune).",
+    "In 2006, the International Astronomical Union (IAU) formally defined what constitutes a 'planet', establishing criteria that an object must orbit the Sun, be massive enough to be roughly spherical, and have cleared its neighboring region of planetesimals.",
+    "Under the 2006 IAU criteria, Pluto, previously considered the ninth planet, was reclassified as a 'dwarf planet' because it shares its orbital neighborhood with other objects in the Kuiper Belt. There are currently five officially recognized dwarf planets in our solar system."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "doc_id": "gravity-basics-16",
+  "title": "Fundamental Concepts of Gravity",
+  "publisher": "NASA",
+  "source_url": "https://spaceplace.nasa.gov/what-is-gravity/en/",
+  "retrieved_date": "2024-09-01",
+  "publication_date": "2021-09-17",
+  "attribution": "NASA Space Place",
+  "license": "Public Domain",
+  "passages": [
+    "Gravity is the force by which a planet or other body draws objects toward its center. On Earth, gravity gives weight to physical objects and causes them to accelerate downward at approximately 9.81 meters per second squared (m/s\u00b2) near the surface.",
+    "Sir Isaac Newton described gravity mathematically in the 17th century as a universal attractive force between masses, proportional to their masses and inversely proportional to the square of the distance between them.",
+    "In 1915, Albert Einstein's theory of general relativity provided a new framework for understanding gravity. Instead of a simple attractive force, Einstein described gravity as a curvature of spacetime caused by the presence of mass and energy."
+  ]
+}
