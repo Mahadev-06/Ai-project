@@ -8,12 +8,14 @@ export default function Header() {
 
   const isAfterAnalyze = location.pathname.startsWith('/results');
 
-  // "After analyze header buttons shouldn't be there"
-  // When viewing results after analysis, hide header buttons completely.
-  // Also, remove "Saved Reports" and "Methodology" from navigation.
+  // Navigation buttons are shown on all pages except the analyzed results section (/results/:id)
   const navLinks = isAfterAnalyze
     ? []
-    : [{ to: '/', label: 'Analyze' }];
+    : [
+        { to: '/', label: 'Analyze' },
+        { to: '/history', label: 'Saved Reports' },
+        { to: '/methodology', label: 'Methodology' },
+      ];
 
   return (
     <header className="border-b border-charcoal/15 bg-ivory sticky top-0 z-30">
