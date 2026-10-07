@@ -185,29 +185,25 @@ class DecisionPolicy:
 
     def _build_supported_reason(self, supporting: list[EvidenceAssessment]) -> str:
         count = len(supporting)
-        passage_ids = ', '.join(a.passage_id for a in supporting[:3])
         return (
-            f"This claim is supported by {count} evidence passage(s) ({passage_ids}). "
-            f"The retrieved evidence directly aligns with the claim's assertion."
+            f"This claim is supported by {count} evidence passage(s). "
+            f"The retrieved evidence directly aligns with and confirms the statement."
         )
 
     def _build_contradicted_reason(self, contradicting: list[EvidenceAssessment]) -> str:
         count = len(contradicting)
-        passage_ids = ', '.join(a.passage_id for a in contradicting[:3])
         return (
-            f"This claim is contradicted by {count} evidence passage(s) ({passage_ids}). "
-            f"The retrieved evidence presents information that conflicts with the claim."
+            f"This claim is contradicted by {count} evidence passage(s). "
+            f"The retrieved evidence presents authoritative information that refutes the statement."
         )
 
     def _build_conflicting_reason(
         self, supporting: list[EvidenceAssessment], contradicting: list[EvidenceAssessment]
     ) -> str:
-        sup_ids = ', '.join(a.passage_id for a in supporting[:2])
-        con_ids = ', '.join(a.passage_id for a in contradicting[:2])
         return (
-            f"This claim has conflicting evidence: {len(supporting)} passage(s) support it ({sup_ids}) "
-            f"while {len(contradicting)} passage(s) contradict it ({con_ids}). "
-            f"The claim may need more specific context or updated information to resolve."
+            f"This claim has conflicting evidence: {len(supporting)} source(s) support it "
+            f"while {len(contradicting)} source(s) contradict it. "
+            f"The claim may require more specific context, temporal qualification, or scientific consensus."
         )
 
     def _build_insufficient_reason(self, assessments: list[EvidenceAssessment]) -> str:

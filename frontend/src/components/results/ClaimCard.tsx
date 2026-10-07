@@ -1,5 +1,6 @@
 import Badge from '../ui/Badge';
 import { ClaimResult } from '../../types/api';
+import { cleanReason } from '../../utils/format';
 
 interface ClaimCardProps {
   claim: ClaimResult;
@@ -36,8 +37,8 @@ export default function ClaimCard({ claim, isSelected, onClick }: ClaimCardProps
       </div>
 
       {claim.reason && (
-        <p className="text-xs text-charcoal/70 line-clamp-2 leading-relaxed">
-          {claim.reason}
+        <p className="text-xs text-charcoal/70 leading-relaxed">
+          {cleanReason(claim.reason)}
         </p>
       )}
 

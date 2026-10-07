@@ -128,10 +128,14 @@ export default function ResultsPage() {
             Evidence Verification Findings
           </h1>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-charcoal/70 mt-2">
-            <span>Mode: <strong className="uppercase">{report?.evidence_mode === 'auto' ? 'Hybrid RAG' : (report?.evidence_mode || 'RAG')}</strong></span>
-            <span>Corpus: <strong>v{report?.corpus_version || '1.0.0'}</strong></span>
-            <span>Analyzed: {report?.analysis_date ? formatDateTime(report.analysis_date) : 'Recently'}</span>
+          <div className="flex flex-wrap items-center gap-2 text-xs text-charcoal/70 mt-3">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-charcoal/5 border border-charcoal/10 font-medium text-charcoal">
+              <span className="w-1.5 h-1.5 rounded-full bg-charcoal/60"></span>
+              Hybrid RAG Pipeline
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-charcoal/5 border border-charcoal/10 text-charcoal/70">
+              Verified {report?.analysis_date ? formatDateTime(report.analysis_date) : 'Recently'}
+            </span>
           </div>
         </div>
 
@@ -169,7 +173,13 @@ export default function ResultsPage() {
             <Button onClick={() => navigate('/')}>Try another claim</Button>
           </div>
         </div>
+      ) : claims.length === 1 ? (
+        /* Unified Presentation for Single Claim (Removes redundant duplicate columns) */
+        <div className="max-w-4xl mx-auto w-full">
+          {selectedClaim && <EvidencePanel claim={selectedClaim} />}
+        </div>
       ) : (
+        /* Multi-Claim Master-Detail Grid */
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Claims Column */}
           <div className="lg:col-span-5 space-y-4">
@@ -204,16 +214,6 @@ export default function ResultsPage() {
           </div>
         </div>
       )}
-
-      {/* Model & System Transparency Footer */}
-      <div className="mt-12 p-4 border-t border-charcoal/10 text-[11px] text-charcoal/60 flex flex-col sm:flex-row justify-between gap-2">
-        <div>
-          Models: <strong>all-MiniLM-L6-v2</strong> (embeddings) • <strong>nli-deberta-v3-small</strong> (NLI) • <strong>en_core_web_sm</strong> (spaCy)
-        </div>
-        <div>
-          Evaluations reflect evidence-relative comparisons, not certified facts.
-        </div>
-      </div>
     </div>
   );
 }

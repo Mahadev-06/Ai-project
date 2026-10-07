@@ -51,3 +51,9 @@ export function getOutcomeDisplay(outcome: ClaimOutcome): string {
       return 'Unknown';
   }
 }
+
+export function cleanReason(reason?: string): string {
+  if (!reason) return '';
+  return reason.replace(/\s*\([a-z0-9\-_,\s]+\)\./gi, '.').trim();
+}
+

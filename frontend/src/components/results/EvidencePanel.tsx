@@ -3,6 +3,7 @@ import { ClaimResult } from '../../types/api';
 import SourceDetails from './SourceDetails';
 import Badge from '../ui/Badge';
 import { ExternalLink, ChevronDown, ChevronUp, Layers } from 'lucide-react';
+import { cleanReason } from '../../utils/format';
 
 interface EvidencePanelProps {
   claim: ClaimResult;
@@ -22,24 +23,24 @@ export default function EvidencePanel({ claim }: EvidencePanelProps) {
   };
 
   return (
-    <div className="border border-charcoal/15 rounded-lg p-6 bg-ivory shadow-sm sticky top-6 space-y-6">
+    <div className="border border-charcoal/15 rounded-lg p-6 sm:p-7 bg-ivory shadow-sm space-y-6">
       {/* Selected Claim Overview */}
       <div className="border-b border-charcoal/10 pb-5">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span className="text-xs uppercase tracking-wider font-semibold text-charcoal/60">
-            Selected Proposition ({claim.id})
+            Verified Claim Statement
           </span>
           <Badge outcome={claim.outcome} />
         </div>
 
-        <p className="font-serif text-lg font-bold text-charcoal leading-snug mb-3">
+        <p className="font-serif text-xl sm:text-2xl font-bold text-charcoal leading-snug mb-3">
           "{claim.claim_text}"
         </p>
 
         {claim.reason && (
-          <div className="p-3 bg-charcoal/5 rounded border border-charcoal/10 text-xs sm:text-sm text-charcoal/80 leading-relaxed">
+          <div className="p-3.5 bg-charcoal/5 rounded-md border border-charcoal/15 text-xs sm:text-sm text-charcoal/90 leading-relaxed">
             <span className="font-semibold text-charcoal">Decision Basis: </span>
-            {claim.reason}
+            {cleanReason(claim.reason)}
           </div>
         )}
 
@@ -120,9 +121,10 @@ export default function EvidencePanel({ claim }: EvidencePanelProps) {
                         {ev.stance}
                       </span>
                       {ev.stance_scores && (
-                        <div className="text-[10px] text-charcoal/50 mt-1 font-mono">
-                          NLI: E {Math.round((ev.stance_scores.entailment || 0) * 100)}% | C{' '}
-                          {Math.round((ev.stance_scores.contradiction || 0) * 100)}%
+                        <div className="text-[11px] text-charcoal/60 mt-1 font-medium">
+                          {ev.stance === 'contradicts' && `${Math.round((ev.stance_scores.contradiction || 0) * 100)}% refutation`}
+                          {ev.stance === 'supports' && `${Math.round((ev.stance_scores.entailment || 0) * 100)}% support`}
+                          {ev.stance === 'neutral' && 'Contextual'}
                         </div>
                       )}
                     </div>
