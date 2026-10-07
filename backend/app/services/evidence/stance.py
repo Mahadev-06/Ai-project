@@ -4,6 +4,7 @@ Uses a cross-encoder NLI model to determine whether evidence
 supports, contradicts, or is neutral to a claim.
 """
 import logging
+import re
 from dataclasses import dataclass
 from typing import Optional
 
@@ -47,34 +48,15 @@ class StanceDetector:
                 return idx
         return None
     
-    def predict(self, evidence_text: str, claim_text: str) -> StanceResult:
-        """Predict stance: evidence is premise, claim is hypothesis.
-        
-        NLI convention: premise=evidence, hypothesis=claim.
-        Entailment means the evidence supports the claim.
-        Contradiction means the evidence contradicts the claim.
-        """
-        # Check if truncation would lose important content
+    def _predict_single(self, premise: str, hypothesis: str) -> StanceResult:
+        """Run cross-encoder inference for a single premise-hypothesis pair."""
         encoded = self.tokenizer(
-            evidence_text, claim_text,
+            premise, hypothesis,
             return_tensors='pt',
             truncation=True,
             max_length=self.max_length,
             return_overflowing_tokens=False,
         )
-        
-        # Detect if truncation occurred
-        full_encoded = self.tokenizer(
-            evidence_text, claim_text,
-            truncation=False,
-            return_tensors='pt',
-        )
-        truncated = full_encoded['input_ids'].shape[1] > self.max_length
-        if truncated:
-            logger.warning(
-                f'Input truncated from {full_encoded["input_ids"].shape[1]} to {self.max_length} tokens. '
-                f'Evidence may lose content.'
-            )
         
         with torch.no_grad():
             outputs = self.model(**encoded)
@@ -82,7 +64,6 @@ class StanceDetector:
         logits = outputs.logits[0]
         probs = torch.softmax(logits, dim=-1).numpy()
         
-        # Extract scores using resolved label indices
         scores = {}
         for idx, label in self.label_map.items():
             scores[label] = float(probs[idx])
@@ -95,8 +76,34 @@ class StanceDetector:
             contradiction=scores.get('contradiction', 0.0),
             neutral=scores.get('neutral', 0.0),
             predicted_label=predicted_label,
-            truncated=truncated,
+            truncated=False,
         )
+
+    def predict(self, evidence_text: str, claim_text: str) -> StanceResult:
+        """Predict stance with sentence-level extraction for compound evidence."""
+        # Clean premise text (strip leading dates like 'Aug 29, 2025 · ')
+        clean_evidence = re.sub(r'^[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}\s*[\-\u2013\u2014·•]+\s*', '', evidence_text.strip())
+        
+        # 1. Full passage prediction
+        base_result = self._predict_single(clean_evidence, claim_text)
+        
+        # 2. Check individual sentences if multi-sentence
+        sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', clean_evidence) if len(s.strip()) >= 15]
+        if len(sentences) <= 1:
+            return base_result
+            
+        best_result = base_result
+        best_signal = max(base_result.entailment, base_result.contradiction)
+        
+        for sent in sentences[:5]:
+            sent_res = self._predict_single(sent, claim_text)
+            sent_signal = max(sent_res.entailment, sent_res.contradiction)
+            # If an individual sentence has a clear non-neutral signal that exceeds the full paragraph
+            if sent_signal > best_signal and (sent_res.entailment >= 0.40 or sent_res.contradiction >= 0.40):
+                best_signal = sent_signal
+                best_result = sent_res
+                
+        return best_result
     
     def predict_batch(self, pairs: list[tuple[str, str]]) -> list[StanceResult]:
         """Predict stance for multiple evidence-claim pairs."""

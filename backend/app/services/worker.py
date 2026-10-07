@@ -290,11 +290,25 @@ class AnalysisWorker:
 
                 # B. Free live open web search (DuckDuckGo - no API key needed)
                 try:
-                    open_items = await asyncio.get_event_loop().run_in_executor(
-                        _executor,
-                        lambda q=query: open_search.search(q, max_results=settings.MAX_EVIDENCE_PER_CLAIM)
-                    )
-                    for idx, item in enumerate(open_items):
+                    search_queries = [query]
+                    if getattr(claim, 'original_sentence', None) and claim.original_sentence.strip() != query.strip():
+                        search_queries.append(claim.original_sentence.strip())
+
+                    all_web_items = []
+                    seen_urls = set()
+                    for sq in search_queries:
+                        open_items = await asyncio.get_event_loop().run_in_executor(
+                            _executor,
+                            lambda q=sq: open_search.search(q, max_results=settings.MAX_EVIDENCE_PER_CLAIM)
+                        )
+                        for it in open_items:
+                            if it.url and it.url not in seen_urls:
+                                seen_urls.add(it.url)
+                                all_web_items.append(it)
+
+                    for idx, item in enumerate(all_web_items):
+                        clean_snippet = re.sub(r'^[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}\s*[\-\u2013\u2014·•]+\s*', '', item.snippet).strip()
+                        passage_text = f"{item.title}. {clean_snippet}" if clean_snippet and not clean_snippet.startswith(item.title) else (clean_snippet or item.title)
                         p = Passage(
                             passage_id=f"web-{uuid.uuid4().hex[:8]}",
                             doc_id=f"web-{idx+1}",
@@ -303,8 +317,8 @@ class AnalysisWorker:
                             source_url=item.url,
                             retrieved_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                             publication_date=None,
-                            text=item.snippet,
-                            content_hash=hashlib.sha256(item.snippet.encode('utf-8')).hexdigest()[:16],
+                            text=passage_text,
+                            content_hash=hashlib.sha256(passage_text.encode('utf-8')).hexdigest()[:16],
                             attribution=item.publisher or "Web Source",
                             license="Public Web",
                             passage_index=idx,
