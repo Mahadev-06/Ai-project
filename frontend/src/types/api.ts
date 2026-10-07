@@ -101,6 +101,9 @@ export interface AnalysisResponse {
   stage?: string;
   created_at: string;
   completed_at?: string;
+  input_text?: string;
+  input_url?: string;
+  evidence_mode?: EvidenceMode;
   report?: AnalysisReport;
   access_token?: string;
 }

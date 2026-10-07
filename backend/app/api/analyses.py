@@ -208,6 +208,9 @@ async def get_analysis(job_id: str, authorization: str = Header(default='')):
             'stage': job.stage,
             'created_at': job.created_at.isoformat() if job.created_at else None,
             'completed_at': job.completed_at.isoformat() if job.completed_at else None,
+            'input_text': job.input_text,
+            'input_url': job.input_url,
+            'evidence_mode': job.evidence_mode.value if hasattr(job.evidence_mode, 'value') else str(job.evidence_mode),
             'report': job.report_json,
         }
 

@@ -4,11 +4,20 @@ const API_BASE = import.meta.env.VITE_API_URL || '/api/v1';
 
 class ApiClient {
   private getAuthToken(jobId: string): string | null {
-    return sessionStorage.getItem(`claimlens_token_${jobId}`);
+    try {
+      return sessionStorage.getItem(`claimlens_token_${jobId}`) || localStorage.getItem(`claimlens_token_${jobId}`);
+    } catch {
+      return null;
+    }
   }
 
   private setAuthToken(jobId: string, token: string): void {
-    sessionStorage.setItem(`claimlens_token_${jobId}`, token);
+    try {
+      sessionStorage.setItem(`claimlens_token_${jobId}`, token);
+      localStorage.setItem(`claimlens_token_${jobId}`, token);
+    } catch {
+      // Ignore storage quota errors
+    }
   }
 
   private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {

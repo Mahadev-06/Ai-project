@@ -13,8 +13,38 @@ import { formatDateTime } from '../../utils/format';
 export default function ResultsPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { analysis, loading, error, cancel, loadExisting, setAnalysis } = useAnalysis();
+  const { analysis, loading, error, cancel, loadExisting, submit, setAnalysis } = useAnalysis();
   const [selectedClaimId, setSelectedClaimId] = useState<string>('');
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  const handleRefresh = async () => {
+    if (isRefreshing || loading) return;
+    setIsRefreshing(true);
+    try {
+      const claimText =
+        analysis?.input_text ||
+        claims[0]?.claim_text ||
+        report?.claims?.[0]?.claim_text;
+
+      if (claimText) {
+        // Re-analyze claim statement to fetch latest evidence
+        const newId = await submit({
+          input_text: claimText,
+          evidence_mode: 'auto',
+        });
+        navigate(`/results/${newId}`, { replace: true });
+      } else if (id) {
+        await loadExisting(id);
+      }
+    } catch (err) {
+      console.error('Failed to refresh analysis:', err);
+      if (id) {
+        await loadExisting(id);
+      }
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
 
   // Load analysis on mount
   useEffect(() => {
@@ -141,7 +171,11 @@ export default function ResultsPage() {
 
         {analysis && (
           <div className="shrink-0">
-            <ReportActions data={analysis} />
+            <ReportActions
+              data={analysis}
+              onRefresh={handleRefresh}
+              isRefreshing={isRefreshing || loading}
+            />
           </div>
         )}
       </div>
