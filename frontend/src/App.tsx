@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
 import AnalyzePage from './components/analyze/AnalyzePage';
 import HistoryPage from './components/history/HistoryPage';
 import MethodologyPage from './components/methodology/MethodologyPage';
@@ -18,7 +17,6 @@ function App() {
           <Route path="/results/:id" element={<ResultsPage />} />
         </Routes>
       </main>
-      <Footer />
     </div>
   );
 }

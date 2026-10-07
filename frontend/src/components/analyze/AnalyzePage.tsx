@@ -49,14 +49,6 @@ export default function AnalyzePage() {
       <div className="w-full bg-ivory p-6 sm:p-8 rounded-lg border border-charcoal/15 shadow-sm">
         <InputForm onSubmit={handleAnalyze} isLoading={loading} />
       </div>
-
-      {/* Methodology callout */}
-      <div className="mt-12 text-center text-xs text-charcoal/60 max-w-xl">
-        <p>
-          ClaimLens is an academic research system. All verification decisions are evidence-relative assessments
-          derived from available corpus documents or public search feeds, not absolute assertions of truth.
-        </p>
-      </div>
     </div>
   );
 }
