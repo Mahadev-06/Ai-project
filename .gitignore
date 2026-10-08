@@ -32,7 +32,8 @@ build/
 
 # Model weights and caches
 .model_cache/
-models/
+/models/
+!backend/app/models/
 *.bin
 *.pt
 *.onnx
