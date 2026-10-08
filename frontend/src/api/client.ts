@@ -1,6 +1,7 @@
 import { AnalysisRequest, AnalysisResponse, HealthResponse, ReadinessResponse } from '../types/api';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api/v1';
+const rawBase = (import.meta.env.VITE_API_URL || '/api/v1').trim().replace(/\/+$/, '');
+const API_BASE = rawBase.endsWith('/api/v1') ? rawBase : `${rawBase}/api/v1`;
 
 class ApiClient {
   private getAuthToken(jobId: string): string | null {
